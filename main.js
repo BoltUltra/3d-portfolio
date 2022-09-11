@@ -47,11 +47,11 @@ function addStar() {
 }
 Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('./space.jpg');
 scene.background = spaceTexture;
 
 // Avatar
-const mayowaTexture = new THREE.TextureLoader().load('mayowa.png');
+const mayowaTexture = new THREE.TextureLoader().load('./mayowa.png');
 const mayowa = new THREE.Mesh(
 	new THREE.BoxGeometry(3, 3, 3),
 	new THREE.MeshBasicMaterial({ map: mayowaTexture })
@@ -61,8 +61,8 @@ scene.add(mayowa);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('./moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('./normal.jpg');
 const moon = new THREE.Mesh(
 	new THREE.SphereGeometry(3, 32, 32),
 	new THREE.MeshStandardMaterial({
